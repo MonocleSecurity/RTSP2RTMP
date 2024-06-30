@@ -78,7 +78,6 @@ int Run(char** argv)
   // Setup RTMP stream
   const std::string rtmpurl(argv[2]);
   std::cout << "Creating RTMP context" << std::endl;
-  
   if (avformat_alloc_output_context2(&rtmpcontext, nullptr, "flv", rtmpurl.c_str()) < 0)
   {
     std::cout << "Failed to create RTMP context" << std::endl;
@@ -144,7 +143,7 @@ int Run(char** argv)
     std::cout << "Failed to write RTMP stream header" << std::endl;
     return EXIT_FAILURE;
   }
-
+  // Stream
   std::cout << "Starting streaming" << std::endl;
   const std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
   while (true)
