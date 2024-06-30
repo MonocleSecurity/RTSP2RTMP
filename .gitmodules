@@ -1,0 +1,4 @@
+[submodule "vcpkg"]
+	path = vcpkg
+	url = git@github.com:MonocleSecurity/vcpkg.git
+	branch = monocle5
